@@ -1,0 +1,26 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+.btn-group .btn {
+    background-color: #2c2c2c;
+    color: #aaa;
+    border: none;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+    user-select: none;
+}
+.btn-group .btn.active, .btn-group input[type="radio"]:checked + label {
+    background-color: #4d4d4d;
+    color: white;
+}
+.btn-group .btn:focus {
+    box-shadow: none;
+    outline: none;
+}
+.btn-group .btn:hover {
+    background-color: #4d4d4d !important;
+    color: white !important;
+}

@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.medi-lock {
+    color: #9F9F9F;
+    font-size: 17px;
+
+}
+
+.custom-border {
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.navig-point {
+    list-style: none;
+}
+
+.user-icon {
+    padding: 16px 22px;
+    border-radius: 11px;
+    color: gray;
+}
+
+.clock-icon {
+    padding: 16px 22px;
+    border-radius: 11px;
+    color: gray;
+}
+
+.custom-navbar {
+    padding: 5px 0px 4px 0px;
+    border-bottom: 1px solid;
+
+}
+
+.navbar-item {
+    margin-right: 20px;
+    color: #ccc;
+}
+
+.navbar-item:hover {
+    color: white;
+}
+
+.navbar-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.btn-group {
+    background-color: #2c2c2c;
+}
+
+.btn-group .btn {
+    background-color: #2c2c2c;
+    color: #aaa;
+    border: none;
+    padding: 4px 16px;
+    margin: 4px;
+}
+
+.btn-group .btn.active {
+    background-color: #4d4d4d;
+    color: white;
+}
+
+.star {
+    padding-right: 10px;
+    color: #cccccc;
+}
+
+.custom-button {
+    background-color: #FF6B0026;
+    border: 1px solid #FF6B00;
+    border-radius: 50px;
+    padding: 4px 8px;
+    color: #ff6600;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.dropdown-icon {
+    margin-left: 5px;
+}
+
+.custom {
+    border-right: 1px solid;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #2c2c2e;
+    border-radius: 6px;
+    padding: 5px 10px;
+    width: 160px;
+    margin-right: 10px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-container input::placeholder {
+    color: #a1a1a3;
+}
+
+.search-icon {
+    color: #a1a1a3;
+    margin-right: 5px;
+}
+
+.header-container {
+    padding: 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 16px;
+    border-bottom: 2px solid;
+}
+
+.border-b {
+    border-bottom: 1px solid #383838;
+    padding-bottom: 20px;
+}
+
+.border-left {
+    border-right: 1px solid #383838;
+    background: #111113;
+}
+
+.crypto-icon {
+    border-radius: 50%;
+    background: white;
+    width: 40px;
+}
+
+.crypto-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.crypto-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.tag {
+    background: #FF6B0026;
+    color: #FF6B00;
+    padding: 4px 8px;
+    border-radius: 19px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #FF6B00;
+}
+
+.text-success {
+    color: #86FFC9 !important;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.stats {
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+
+.audit {
+    color: #EFB412;
+    font-weight: bold;
+}
+
+.btn-custom {
+    background: #343a40;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.btn-custom:hover {
+    background: #495057;
+}
+
+.divider {
+    padding-right: 16px;
+}
+
+.custom-color {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.text-white {
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 14px;
+}
+
+.custom-text {
+    font-size: 14px;
+    font-weight: 400;
+    color: #cccccc;
+}
+
+.custom-icon {
+    font-size: 12px;
+    color: #cccccc;
+    padding: 10px;
+}
+
+.span-bg {
+    background-color: #EFB41240;
+    padding: 2px 10px;
+    border-radius: 4px;
+}
+
+.toolbar-container {
+    border-radius: 10px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #cccccc;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cccccc;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dividers {
+    width: 1px;
+    height: 20px;
+    background: #444;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+.icon-btn:hover {
+    color: #bbb;
+}
+
+.main-div {
+    margin: 12px 16px;
+    border: 1px solid;
+    border-radius: 8px;
+    background: #111113;
+}
+
+.btn-gray {
+    color: #cccccc;
+}
+.btn-gray-2{
+    border: 1px solid #cccccc;
+    background: #2D2D33;
+    color: #cccccc;
+}
+.dropdown-menu {
+    background-color: #212529;
+    color: #cccccc;
+}
+
+.dropdown-item {
+    color: #cccccc;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: #212529;
+    color: #cccccc;
+}
+
+.sidebar {
+    width: 60px;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    gap: 13px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.sidebar i {
+    color: #bbb;
+    font-size: 20px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.sidebar i:hover {
+    color: white;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.smiley {
+    font-size: 22px;
+}
+
+.trading-panel {
+    border-radius: 10px;
+}
+
+.bg-gray {
+    background-color: #111113;
+}
+
+.btn-buy {
+    background: #ff7b00;
+    color: white;
+    border-radius: 5px;
+    padding: 12px 68px;
+}
+
+.btn-sell {
+    color: #ff7b00;
+    border-radius: 5px;
+    padding: 12px 68px;
+    border: 1px solid #ff7b00;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* .btn-buy:hover, .btn-sell:hover {
+    opacity: 0.8;
+} */
+.btn:hover {
+    background-color: #ff7b00;
+    color: white;
+}
+.amount{
+    color: #cccccc !important;
+    padding: 8px;
+}
+.amount-btn {
+    background: #2D2D33;
+    color: #cccccc;
+    border-radius: 5px;
+    padding: 8px 27px;
+    text-align: center;
+}
+
+.amount-btn:hover {
+    background: #333;
+}
+.custom-input{
+    background-color: #4B4B54;
+    border-radius: 7px;
+}
+.stats-box {
+    background: #222;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.panel {
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.progress {
+    height: 6px;
+}
+
+.progress-bar-buy {
+    background-color: #86FFC9;
+}
+
+.progress-bar-sell {
+    background-color: #F03A3A;
+}
+
+.custom-p {
+    color: #cccccc;
+    padding: 16px 18px;
+}
+
+.custom-div-p {
+    color: #cccccc;
+    gap: 133px;
+}
+
+.custom-btn-color {
+    color: #86FFC9;
+}
+
+.custom-btn {
+    padding: 3px 28px;
+    border: 1px solid #2D2D33;
+    background: none;
+}
+
+.custom-main-div {
+    border-left: 1px solid #2D2D33;
+    padding-left: 10px;
+    padding-right: 7px;
+}
+
+.custom-table {
+    padding: 9px 17px;
+}
+
+.custom-main-table {
+    border: 1px solid #383838;
+    background-color: #111113;
+    border-radius: 8px;
+}
+
+.border-right {
+    border-right: 1px solid #383838;
+}
+
+.custom-td {
+    /* padding: 6px 26px; */
+    /* border: 1px solid #383838; */
+
+    background: transparent;
+    color: #cccccc;
+    border-radius: 5px;
+}
+
+.btn-warning {
+    background: #FF6B004D;
+    color: #FF6B00;
+    border: 1px solid;
+    font-size: 14px;
+}
+
+.btn-warning:hover {
+    background-color: #FF6B004D;
+    color: #FF6B00;
+}
+
+.text-warning {
+    border-bottom: 1px solid #FF6B00;
+    color: #FFFFFF !important;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 25px;
+}
+
+.text-light {
+    color: #cccccc !important;
+}
+
+.bg-secondary {
+    background-color: #4B4B54 !important;
+    color: #cccccc !important;
+}
+
+.btn-disabled {
+    background: #2D2D33;
+    border: none;
+    color: #cccccc;
+}
+.custom-span{
+    color: #cccccc;
+    padding: 2px;
+}
+.buyAmount-hood{
+    color: white;
+    background-color: #2D2D33;
+    padding: 10px !important;
+}
+.stats-bar {
+    display: flex;
+    justify-content: space-between;
+    background: #111;
+    border-radius: 5px;
+    margin-top: 10px;
+    border: 1px solid #2D2D33;
+    color: #cccccc;
+}
+.stats-bar div {
+    text-align: center;
+    flex: 1;
+}
+.green {
+    color: #4CAF50;
+}
+.red {
+    color: #E74C3C;
+}
+.invested{
+border-right: 1px solid #111113;
+}
+.table{
+    background: #1a1a1a !important;
+
+}
+.table-dark-custom {
+    background-color: #1e1e1e;
+    color: white;
+}
+.table-dark-custom th, .table-dark-custom td {
+    border-color: #333;
+}
+
+
+.trader{
+    border: 1px solid #2D2D33;
+    border-radius: 8px;
+    padding: 4px
+}
+
+.navbar-dark-custom {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.nav-item {
+    color: #bbb;
+    text-decoration: none;
+    padding: 2px 15px;
+    border-radius: 5px;
+}
+.nav-item:hover, .active {
+    background-color: #333;
+    color: white;
+}
+.instant-trade {
+    color: #FF6B00;
+    padding: 4px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #FF6B00;
+    margin-right: 14px;
+}
+tbody, td, tfoot, th, thead, tr{
+border:none;
+}
+tbody, td, tfoot, th, thead, tr, th{
+    background-color: #111113 !important;
+    color: #cccccc !important;
+}
+.custom-tr{
+border-top  :1px solid #383838;
+border-bottom:1px solid #383838;
+}
+.mt-7{
+    margin-top: 305px;
+}
+.light-orange{
+    color: #FF8686;
+}
+.bg-dangers{
+    background-color: #FF868640;
+    color: #FF8686;
+    padding: 8px 12px;
+}
+.light-green{
+    color: #86FFC9;
+}
+.bg-succes{
+  background-color: #86FFC940;  
+  color: #86FFC9;
+  padding: 8px 12px;
+
+}
