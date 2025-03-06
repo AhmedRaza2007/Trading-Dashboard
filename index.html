@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Dashboard</title>
+    <link rel="stylesheet" href="md.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2 class="text-center">Trading Dashboard</h2>
+        
+        <div class="row">
+            <!-- Price Chart -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Price Chart</div>
+                    <div class="card-body">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Order Book -->
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">Order Book</div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Buy: $50.00 - 2 BTC</li>
+                            <li class="list-group-item">Sell: $51.00 - 1.5 BTC</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <!-- Trade History -->
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">Trade History</div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12:30 PM</td>
+                                    <td>Buy</td>
+                                    <td>1 BTC</td>
+                                    <td>$50.50</td>
+                                </tr>
+                                <tr>
+                                    <td>12:31 PM</td>
+                                    <td>Sell</td>
+                                    <td>0.5 BTC</td>
+                                    <td>$51.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="d-flex justify-content-between align-items-center custom-navbar">
+        <div class="d-flex align-items-center">
+            <span class="navbar-item">1 Position</span>
+            <span class="navbar-item">Amount</span>
+            <span class="navbar-item">Recent</span>
+        </div>
+        <div class="d-flex align-items-center">
+            <span class="navbar-item">HOOD $1.91 <span class="text-success">+7.55%</span></span>
+            <span class="navbar-item">9.15</span>
+            <span class="navbar-item">0.0015</span>
+            <span class="navbar-item">0.004477</span>
+            <input type="text" placeholder="Search" class="form-control form-control-sm" style="width: 100px; margin-right: 10px;">
+            <img src="icon.png" alt="Icon" class="navbar-icon">
+        </div>
+    </nav>
+
+<div class="container">
+    <div class="btn-group" role="group" aria-label="Switcher">
+        <input type="radio" class="btn-check" name="options" id="positionBtn" autocomplete="off" checked>
+        <label class="btn" for="positionBtn">1 Position</label>
+
+        <input type="radio" class="btn-check" name="options" id="amountBtn" autocomplete="off">
+        <label class="btn" for="amountBtn">Amount</label>
+
+        <input type="radio" class="btn-check" name="options" id="recentBtn" autocomplete="off">
+        <label class="btn" for="recentBtn">Recent</label>
+    </div>
+</div>
+    <!-- <div class="container">
+        <div class="btn-group" role="group" aria-label="Switcher">
+            <button type="button" class="btn" id="positionBtn">1 Position</button>
+            <button type="button" class="btn" id="amountBtn">Amount</button>
+            <button type="button" class="btn" id="recentBtn">Recent</button>
+        </div>
+    </div>
+    
+    <script>
+        const buttons = document.querySelectorAll('.btn-group .btn');
+        const defaultButton = document.getElementById('positionBtn');
+        defaultButton.classList.add('active');
+    
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+            });
+        });
+    </script>
+    <div class="btn-group" role="group" aria-label="Switcher">
+        <button type="button" class="btn active" id="positionBtn">1 Position</button>
+        <button type="button" class="btn" id="amountBtn">Amount</button>
+        <button type="button" class="btn" id="recentBtn">Recent</button>
+    </div>  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('priceChart').getContext('2d');
+        var priceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['10 AM', '11 AM', '12 PM', '1 PM'],
+                datasets: [{
+                    label: 'Price',
+                    data: [49, 50, 51, 50.5],
+                    borderColor: 'blue',
+                    fill: false
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
