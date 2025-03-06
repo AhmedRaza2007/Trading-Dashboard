@@ -1,144 +1,449 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trading Dashboard</title>
-    <link rel="stylesheet" href="md.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ca86787c55.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <title>Trading Dashboard</title>
 </head>
+
 <body>
-    <div class="container mt-4">
-        <h2 class="text-center">Trading Dashboard</h2>
-        
-        <div class="row">
-            <!-- Price Chart -->
-            <div class="col-md-6">
-                <div class="card">
+  <section>
+    <div class="contanier mx-auto">
+      <div class="row g-0">
+        <div class="d-flex flex-column flex-lg-row">
+          <div class="col-1 sideBar d-none d-lg-flex flex-column border-left">
+            <div class="d-flex justify-content-around custom-border">
+              <i class="fa-brands fa-expeditedssl py-3 medi-lock"></i>
+            </div>
+            <div class="custom">
+              <img src="./img/logo.svg" alt="Logo" />
+              <ul class="p-0 text-center">
+                <li class="navig-point"><a href="#"><img src="./img/navig-point.svg" alt=""></a></li>
+                <li class="mt-3"><a href="#"><i class="fa-solid fa-user user-icon"></i></a></li>
+                <li class="mt-3"><a href="#"><img src="./img/banknote-line-duotone.svg" alt=""></a></li>
+                <li class="mt-3"><a href="#"><img src="./img/material-symbols-light.svg" alt=""></a></li>
+                <li class="mt-3"><a href="#"><img src="./img/ic-round-webhook.svg" alt=""></a></li>
+                <li class="mt-3"><a href="#"><i class="fa-regular fa-clock clock-icon"></i></a></li>
+                <li class="mt-3"><a href="#"><img src="./img/layers-bold-duotone.svg" alt=""></a></li>
+                <li class="mt-3"><a href="#"><img src="./img/settings-bold.svg" alt=""></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col">
+            <nav class="d-flex justify-content-between align-items-center custom-navbar">
+              <div class="ps-3  d-flex align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn active" id="positionBtn">1 Position</button>
+                  <button type="button" class="btn" id="amountBtn">Amount</button>
+                  <button type="button" class="btn" id="recentBtn">Recent</button>
+                </div>
+                <div class="navbar-item">
+                  <img src="./img/hood.svg" alt="" class="pe-2 ps-3">
+                  <span>HOOD $1.91 <span class="text-success">+7.55%</span></span>
+                </div>
+              </div>
+              <div class="d-flex align-items-center">
+                <div class="navbar-item d-flex align-items-center">
+                  <span>9.15</span>
+                  <span><img src="./img/formkit_solana.svg" alt=""></span>
+                </div>
+                <div class="navbar-item d-flex align-items-center">
+                  <span>0.0015</span>
+                  <img src="./img/bxs_gas-pump.svg" alt="">
+                </div>
+                <div class="navbar-item d-flex align-items-center">
+                  <span>0.004477</span>
+                  <img src="./img/mdi_hand-coin.svg" alt="">
+                </div>
+                <div class="search-container">
+                  <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+                  <input type="text" placeholder="Search">
+                </div>
+                <i class="fa-solid fa-star star"></i>
+                <div>
+                  <button class="custom-button">
+                    GE <span class="dropdown-icon"><i class="fa-solid fa-chevron-up fa-rotate-180"></i></span>
+                  </button>
+                </div>
+              </div>
+            </nav>
+            <div class="d-flex">
+              <div class="col-9">
+                <div class="main-div">
+                  <div class="header-container">
+                    <div class="crypto-info">
+                      <img src="./img/hood.svg" alt="Crypto Logo" class="crypto-icon">
+                      <div>
+                        <div class="crypto-title">HOOD <span class="custom-text">dogwifho... <img
+                              src="./img/bxs_copy.svg" alt=""></span></div>
+                        <span class="text-success">13h </span>
+                        <i class="fa-regular fa-clock custom-icon"></i>
+                        <img src="./img/material-symbols-light_pill.svg" alt="">
+                        <i class="fa-solid fa-globe custom-icon"></i>
+                        <button class="btn btn-custom"><i class="fa-solid fa-share"></i> Share</button>
+                        <span class="tag">PnL 🤘</span>
+                      </div>
+                    </div>
+                    <div class="stats">
+                      <div class="divider">
+                        <div class="custom-color">Price</div>
+                        <span class="text-white">$0.0ₐ6152</span>
+                      </div>
+                      <div class="divider">
+                        <div class="custom-color">Mkt Cap</div>
+                        <span class="text-white">$6.15K</span>
+                      </div>
+                      <div class="divider">
+                        <div class="custom-color">Liquidity</div>
+                        <span class="text-white">$4.9K</span>
+                      </div>
+                      <div class="divider">
+                        <div class="custom-color">Supply</div>
+                        <span class="text-white">999.3M</span>
+                      </div>
+                      <div>
+                        <div class="custom-color">Audit</div>
+                        <span class="audit"><i class="fa-solid fa-shield"></i> Caution <span
+                            class="span-bg">7/8</span></span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="toolbar-container">
+                    <div class="toolbar-left">
+                      <span>1s</span>
+                      <div class="dividers"></div>
+                      <i class="fa-solid fa-sliders"></i>
+                      <div class="dividers"></div>
+                      Indicators
+                      <div class="dividers"></div>
+                      <div>
+                        Price / <span class="text-success">MCap</span>
+                      </div>
+                      <div class="dividers"></div>
+                      Bubble Map
+                      <div class="dividers"></div>
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-gray dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          Display Options <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Option 1</a></li>
+                          <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        </ul>
+                      </div>
+                      <div class="dividers"></div>
+                      Reset
+                    </div>
+
+                    <div class="toolbar-right">
+                      <div class="dropdown">
+                        <button class="btn btn-sm btn-gray dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                          METAX-1 <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu ">
+                          <li><a class="dropdown-item" href="#">Option 1</a></li>
+                          <li><a class="dropdown-item" href="#">Option 2</a></li>
+                        </ul>
+                      </div>
+                      <div class="dividers"></div>
+                      <button class="icon-btn"><i class="fa-brands fa-searchengin"></i></button>
+                      <button class="icon-btn"><i class="fa-solid fa-cog"></i></button>
+                      <button class="icon-btn"><i class="fa-solid fa-camera"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex">
+                  <div class="sidebar">
+                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <i class="fa-solid fa-project-diagram"></i>
+                    <i class="fa-solid fa-sliders"></i>
+                    <i class="fa-solid fa-pen-nib"></i>
+                    <i class="fa-solid fa-t"></i>
+                    <div class="spacer"></div>
+                    <i class="fa-regular fa-face-smile smiley"></i>
+                  </div>
+                 <div class="col-11">
+                  <div class="card">
                     <div class="card-header">Price Chart</div>
                     <div class="card-body">
                         <canvas id="priceChart"></canvas>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Order Book -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Order Book</div>
-                    <div class="card-body">
-                        <ul class="list-group">
-                            <li class="list-group-item">Buy: $50.00 - 2 BTC</li>
-                            <li class="list-group-item">Sell: $51.00 - 1.5 BTC</li>
-                        </ul>
-                    </div>
+                 </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="row mt-4">
-            <!-- Trade History -->
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">Trade History</div>
-                    <div class="card-body">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Time</th>
-                                    <th>Type</th>
-                                    <th>Amount</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>12:30 PM</td>
-                                    <td>Buy</td>
-                                    <td>1 BTC</td>
-                                    <td>$50.50</td>
-                                </tr>
-                                <tr>
-                                    <td>12:31 PM</td>
-                                    <td>Sell</td>
-                                    <td>0.5 BTC</td>
-                                    <td>$51.00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <div>
+                  <div class="container px-4">
+                    <nav class="navbar-dark-custom d-flex justify-content-between py-3">
+                      <div class="trader">
+                        <a href="#" class="nav-item active">Trades</a>
+                        <a href="#" class="nav-item">Orders</a>
+                        <a href="#" class="nav-item">Positions</a>
+                        <a href="#" class="nav-item">History</a>
+                        <a href="#" class="nav-item">Holders (251)</a>
+                        <a href="#" class="nav-item">Top Traders</a>
+                        <a href="#" class="nav-item">Dev Tokens</a>
+                      </div>
+                      <div class="d-flex">
+                        <a href="#" class="instant-trade"><i class="fas fa-bolt"></i> Instant Trade</a>
+                        <div class="dropdown">
+                          <button class="btn btn-sm btn-gray-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Filters <i class="fa-solid fa-chevron-down"></i>
+                          </button>
+                          <ul class="dropdown-menu ">
+                            <li><a class="dropdown-item" href="#">Option 1</a></li>
+                            <li><a class="dropdown-item" href="#">Option 2</a></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </nav>
+
+                    <table class="table table-dark-custom table-bordered text-center">
+                      <thead>
+                        <tr class="custom-tr">
+                          <th class="py-4">Age</th>
+                          <th class="py-4">Type</th>
+                          <th class="py-4">Market Cap</th>
+                          <th class="py-4">Amt</th>
+                          <th class="py-4">Total</th>
+                          <th class="py-4">Maker</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="py-4"><i class="fas fa-clock"></i> <span class="light-orange">7m</span></td>
+                          <td class="py-4"><span class="badge bg-dangers">S</span></td>
+                          <td class="py-4 "><span class="light-orange">$6.13K</span></td>
+                          <td class="py-4"><span class="light-orange">26.07K</span></td>
+                          <td class="py-4"><span class="light-orange">0.06954</span></td>
+                          <td class="py-4"><i class="fas fa-user"></i> <span class="light-orange">9sTwE78c</span></td>
+                        </tr>
+                        <tr>
+                          <td class="py-4"><i class="fas fa-clock"></i> <span class="light-green">23m</span></td>
+                          <td class="py-4"><span class="badge bg-succes light-green">B</span></td>
+                          <td class="py-4"><span class="light-green">$6.19K</span></td>
+                          <td class="py-4"><span class="light-green">2.73M</span></td>
+                          <td class="py-4"><span class="light-green">0.07292</span></td>
+                          <td class="py-4"><i class="fas fa-user"></i> <span class="light-green">4W7PajEn</span></td>
+                        </tr>
+                        <tr>
+                          <td class="py-4"><i class="fas fa-clock"></i> <span class="light-green">29m</span></td>
+                          <td class="py-4"><span class="badge bg-succes light-green">B</span></td>
+                          <td class="py-4"><span class="light-green">$8.76K</span></td>
+                          <td class="py-4"><span class="light-green">2.09M</span></td>
+                          <td class="py-4"><span class="light-green">0.07932</span></td>
+                          <td class="py-4"><i class="fas fa-user"></i><span class="light-green"> fa4hcwCn</span></td>
+                        </tr>
+                        <tr>
+                          <td class="py-4"><i class="fas fa-clock"></i> <span class="light-green">29m</span></td>
+                          <td class="py-4"><span class="badge bg-succes light-green">B</span></td>
+                          <td class="py-4"><span class="light-green">$7.31K</span></td>
+                          <td class="py-4"><span class="light-green">130.45M</span></td>
+                          <td class="py-4"><span class="light-green">4.12</span></td>
+                          <td class="py-4"><i class="fas fa-user"></i> <span class="light-green">14EcZu3j</span></td>
+                        </tr>
+                        <tr>
+                          <td class="py-4"><i class="fas fa-clock"></i> <span class="light-orange">29m</span></td>
+                          <td class="py-4"><span class="badge bg-dangers">S</span></td>
+                          <td class="py-4 "><span class="light-orange">$7.32K</span></td>
+                          <td class="py-4"><span class="light-orange">130.25M</span></td>
+                          <td class="py-4"><span class="light-orange">4.12</span></td>
+                          <td class="py-4"><i class="fas fa-user"></i> <span class="light-orange">14eCZouY</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
+
+              </div>
+              <div class="col-3 pe-2">
+                <div class="container mt-3 p-0">
+                  <div class="trading-panel">
+                    <div class="container p-0 bg-gray">
+                      <div class="panel">
+                        <div>
+                          <button class="btn custom-btn btn-dark d-inline-grid">5M <span>-</span></button>
+                          <button class="btn custom-btn btn-success d-inline-grid">1H <span
+                              class="custom-btn-color">1%</span></button>
+                          <button class="btn custom-btn btn-dark d-inline-grid">6H <span
+                              class="custom-btn-color">10%</span></button>
+                          <button class="btn custom-btn btn-dark d-inline-grid">24H <span
+                              class="custom-btn-color">11%</span></button>
+                        </div>
+                        <div class="d-flex py-3">
+                          <div>
+                            <div class="custom-p">
+                              <div>Txns</div>
+                              <div>152</div>
+                            </div>
+                            <div class="custom-p">
+                              <div>Volume</div>
+                              <div>$54.58K</div>
+                            </div>
+                            <div class="custom-p">
+                              <div>Makers</div>
+                              <div>95</div>
+                            </div>
+                          </div>
+                          <div class="custom-main-div">
+                            <div class="mt-2 custom-div-p d-flex justify-content-between pt-2">
+                              <div>
+                                <div>Buys</div>
+                                <div>116 </div>
+                              </div>
+                              <div>
+                                <div>Buys</div>
+                                <div>36</div>
+                              </div>
+                            </div>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-buy" style="width: 76%"></div>
+                              <div class="progress-bar progress-bar-sell" style="width: 24%"></div>
+                            </div>
+                            <div class="mt-2 custom-div-p d-flex justify-content-between pt-3">
+                              <div>
+                                <div>Buy Vol</div>
+                                <div> $37.43 </div>
+                              </div>
+                              <div>
+                                <div>Sell Vol</div>
+                                <div>$17.15K</div>
+                              </div>
+                            </div>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-buy" style="width: 69%"></div>
+                              <div class="progress-bar progress-bar-sell" style="width: 31%"></div>
+                            </div>
+                            <div class=" custom-div-p d-flex justify-content-between pt-3">
+                              <div>
+                                <div> Buyers</div>
+                                <div>95</div>
+                              </div>
+                              <div>
+                                <div>Sellers</div>
+                                <div>22</div>
+                              </div>
+                            </div>
+                            <div class="progress">
+                              <div class="progress-bar progress-bar-buy" style="width: 81%"></div>
+                              <div class="progress-bar progress-bar-sell" style="width: 19%"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container mt-3 p-0">
+                      <table class="custom-main-table">
+                        <tr>
+                          <td class=" custom-table border-right"><button class="btn btn-warning p-1">Default</button>
+                          </td>
+                          <td class=" custom-table border-right"><button class="btn custom-td p-0">P2</button></td>
+                          <td class=" custom-table border-right"><button class="btn custom-td p-0">P3</button></td>
+                          <td class=" custom-table border-right"><button class="btn custom-td p-0">P4</button></td>
+                          <td class=" custom-table border-right"><button class="btn custom-td p-0">P5</button></td>
+                          <td class=" custom-table"><button class="btn custom-td p-0"><i
+                                class="bi bi-sliders"></i></button></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="custom-main-table mt-3 px-2">
+                      <div class="d-flex justify-content-between mt-3 border-b">
+                        <button class="btn btn-buy">Buy</button>
+                        <button class="btn btn-sell">Sell</button>
+                      </div>
+                      <div class="container mt-3 p-0 ">
+                        <div class="d-flex justify-content-between align-items-center border-b">
+                          <div>
+                            <span class="text-warning me-2">Market</span>
+                            <span class="text-light me-2">Limit</span>
+                            <span class="text-light">DCA</span>
+                          </div>
+                          <div class="bg-secondary rounded-pill px-3 py-1 d-flex align-items-center">
+                            <i class="bi bi-wallet2 me-2"></i>
+                            <span class="me-2">1</span>
+                            <span class="me-2">9.15</span>
+                            <i class="bi bi-list"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mt-3 d-flex align-items-center custom-input">
+                        <label for="amount" class="form-label amount m-0">Amount</label>
+                        <input type="number" id="amount" class="form-control bg-dark text-red" placeholder="0">
+                      </div>
+                      <div class="d-flex gap-2 mt-2">
+                        <button class="amount-btn">0.01</button>
+                        <button class="amount-btn">0.02</button>
+                        <button class="amount-btn">0.5</button>
+                        <button class="amount-btn">1</button>
+                      </div>
+                      <div class="container p-0 mt-7">
+                        <div class="d-flex justify-content-between mt-2 align-items-center">
+                          <button class="btn btn-secondary btn-disabled" disabled>Auto Sell</button>
+                          <div>
+                            <span class="custom-span"><i class="fas fa-gas-pump"></i> <span id="fuel">0.01</span></span>
+                            <span class="custom-span"><i class="fas fa-percent"></i> <span
+                                id="percentage">30%</span></span>
+                            <span class="custom-span"><i class="fas fa-box"></i> <span id="stock">0.01</span></span>
+                            <span class="custom-span"><i class="fas fa-network-wired"></i></span>
+                            <span class="custom-span"><i class="fas fa-chevron-right"></i></span>
+                          </div>
+                        </div>
+                        <div class="input-group mt-3 mb-3">
+                          <input type="number" id="buyAmount" class="form-control bg-dark text-white"
+                            placeholder="Buy HOOD for 0">
+                          <button class="btn buyAmount-hood p-0" onclick="buyHood()">Buy</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="stats-bar">
+                      <div class="invested py-3">Invested<br><span class="green">$56.44</span></div>
+                      <div class="invested py-3">Sold<br><span class="red">$58.8</span></div>
+                      <div class="invested py-3">Remaining<br><span>$1.91</span></div>
+                      <div class="py-3 pe-1">PnL Change<br><span class="green">$4.26 (+8%)</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <nav class="d-flex justify-content-between align-items-center custom-navbar">
-        <div class="d-flex align-items-center">
-            <span class="navbar-item">1 Position</span>
-            <span class="navbar-item">Amount</span>
-            <span class="navbar-item">Recent</span>
-        </div>
-        <div class="d-flex align-items-center">
-            <span class="navbar-item">HOOD $1.91 <span class="text-success">+7.55%</span></span>
-            <span class="navbar-item">9.15</span>
-            <span class="navbar-item">0.0015</span>
-            <span class="navbar-item">0.004477</span>
-            <input type="text" placeholder="Search" class="form-control form-control-sm" style="width: 100px; margin-right: 10px;">
-            <img src="icon.png" alt="Icon" class="navbar-icon">
-        </div>
-    </nav>
-
-<div class="container">
-    <div class="btn-group" role="group" aria-label="Switcher">
-        <input type="radio" class="btn-check" name="options" id="positionBtn" autocomplete="off" checked>
-        <label class="btn" for="positionBtn">1 Position</label>
-
-        <input type="radio" class="btn-check" name="options" id="amountBtn" autocomplete="off">
-        <label class="btn" for="amountBtn">Amount</label>
-
-        <input type="radio" class="btn-check" name="options" id="recentBtn" autocomplete="off">
-        <label class="btn" for="recentBtn">Recent</label>
-    </div>
-</div>
-    <!-- <div class="container">
-        <div class="btn-group" role="group" aria-label="Switcher">
-            <button type="button" class="btn" id="positionBtn">1 Position</button>
-            <button type="button" class="btn" id="amountBtn">Amount</button>
-            <button type="button" class="btn" id="recentBtn">Recent</button>
-        </div>
-    </div>
-    
-    <script>
-        const buttons = document.querySelectorAll('.btn-group .btn');
-        const defaultButton = document.getElementById('positionBtn');
-        defaultButton.classList.add('active');
-    
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                buttons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-            });
-        });
-    </script>
-    <div class="btn-group" role="group" aria-label="Switcher">
-        <button type="button" class="btn active" id="positionBtn">1 Position</button>
-        <button type="button" class="btn" id="amountBtn">Amount</button>
-        <button type="button" class="btn" id="recentBtn">Recent</button>
-    </div>  -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        var ctx = document.getElementById('priceChart').getContext('2d');
-        var priceChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['10 AM', '11 AM', '12 PM', '1 PM'],
-                datasets: [{
-                    label: 'Price',
-                    data: [49, 50, 51, 50.5],
-                    borderColor: 'blue',
-                    fill: false
-                }]
-            }
-        });
-    </script>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+      var ctx = document.getElementById('priceChart').getContext('2d');
+      var priceChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ['10 AM', '11 AM', '12 PM', '1 PM'],
+              datasets: [{
+                  label: 'Price',
+                  data: [49, 50, 51, 50.5],
+                  borderColor: 'blue',
+                  fill: false
+              }]
+          }
+      });
+  </script>
 </body>
+
 </html>
